@@ -15,3 +15,6 @@ another message
 [Click here for google](http://www.google.com)
 
 ### [click here for yahoo](http://www.yahoo.com)
+
+
+[link to week1 assignments page](https://github.com/nab143/CIM640/tree/master/week1)
