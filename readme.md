@@ -18,3 +18,5 @@ another message
 
 
 [link to week1 assignments page](https://github.com/nab143/CIM640/tree/master/week1)
+
+![penguin image](http://dfp3r41v9wmfi.cloudfront.net/wp-content/uploads/emperor_chicks.jpg)
