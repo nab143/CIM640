@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Temperature Converter</title>
+
+    <style>
+        /* Enter CSS below */
+    </style>
+
+ </head>
+
+
+<body>
+
+    
+    <h1>Temperature Converter</h1>
+
+    <p><i>Enter the temperature degree in the text box below and hit the button for the conversion.</i></p>
+    
+    <br><br>
+
+   <form>
+       <label for="C">Degree in Celcius:</label>
+       <input type="C" name="C" id="C">
+       <br><br>
+       <button type="button" id="CButton">Convert to Fahrenheit</button>
+       
+       <br><br>  
+       
+   </form>
+   
+   <div id="output"></div>
+   
+    <script>
+        
+        function CtoF(){
+            var CAmount = document.getElementById("C").value;
+            console.log(CAmount + "C");
+            
+            var Cconversion = (CAmount-32)*5/9;
+            
+            Cconversion = Math.round(Cconversion);
+            
+            console.log(Cconversion);
+            
+            var message = Cconversion + "°F" ;
+            console.log(message);
+            
+            var outputText = document.getElementById("output");
+            outputText.innerHTML = message;
+            
+        }
+        
+        
+        var getButton = document.getElementById("CButton");
+        getButton.addEventListener("click", CtoF);
+        
+    </script>
+       
+       <br><br><br>
+       
+    <form>
+        <label for="F">Degree in Fahrenheit</label>
+        <input type="F" name="F" id="F">
+        <br><br>
+        <button type="button" id="FButton">Convert to Celsius</button>
+        <br><br>
+        
+    </form>
+       
+    <div id="output2"></div>
+    
+    <script>
+        
+        function FtoC(){
+            var FAmount = document.getElementById("F").value;
+            console.log(FAmount + "F");
+            
+            var Fconversion = (FAmount * 9) / 5 + 32;
+            
+            Fconversion = Math.round(Fconversion);
+            
+            console.log(Fconversion);
+            
+            var message = Fconversion + "°C" ;
+            console.log(message);
+            
+            var outputText = document.getElementById("output2");
+            outputText.innerHTML = message;
+            
+        }
+        
+        
+        var getButton = document.getElementById("FButton");
+        getButton.addEventListener("click", FtoC);
+
+    </script>
+
+</body>
+
+</html>

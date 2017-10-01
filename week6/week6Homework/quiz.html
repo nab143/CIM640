@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz</title>
+
+    <style>
+        body {
+        background-color: lightskyblue;
+        font-family:arial, helvetica, sans-serif;
+        color: blue;
+        }
+        
+        img {
+            display: block;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1 id="myCss"><b>Quiz:</b>&nbsp;The Great Barrier Reef</h1>
+    
+    <img src="http://cdn2.spiegel.de/images/image-983861-breitwandaufmacher-clsu-983861.jpg">
+
+    <p style="color:mediumblue"><b><i>Answer the questions below:</i></b></p>
+
+    <script>
+        var cssChange = document.getElementById("myCss")
+        cssChange.style.color = "darkblue";
+        cssChange.style.fontSize = "40px";
+        cssChange.style.textAlign = "center";        
+    </script>
+   
+    <form>
+
+
+        <label for="question1">The Great Barrier Reef consists of 600 islands.</label>
+        <select name="question1" id="question1" class="question">
+            <option value="true">true</option>
+            <option value="false">false</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label for="question2">What body of water surrounds the Great Barrier Reef?</label>
+        <select name="question2" id="question2" class="question">
+            <option value="red">Red Sea</option>
+            <option value="mediterranean">Mediterranean Sea </option>
+            <option value="caribbean">Caribbean Sea</option>
+            <option value="coral">Coral Sea</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label for="question3">Which significant shipwreck lies on the Great Barrier Reef?</label>
+        <select name="question3" id="question3" class="question">
+            <option value="pandora">The Pandora</option>
+            <option value="titanic">The Titanic</option>
+            <option value="arizona">The Arizona</option>
+            <option value="andrea doria">The Andrea Doria</option>
+        </select>
+
+        <br>
+        <br>
+        
+        <label for="question4">What do most scientists agree is the biggest threat to coral reefs around the world?</label>
+        <select name="question4" id="question4" class="question">
+            <option value="fishing">Fishing</option>
+            <option value="water">Water Quality</option>
+            <option value="climate">Climate Change</option>
+            <option value="tourism">Tourism</option>
+        </select>
+        
+        <br>
+        <br>
+        
+        <label for="question5">What marine mammal has the majority of its population on the Great Barrier Reef?</label>
+        <select name="question5" id="question5" class="question">
+            <option value="shark">Great White Shark</option>
+            <option value="whale">Humpback Whale</option>
+            <option value="lion">South American Sea Lion</option>
+            <option value="manatee">West Indian Manatee</option>
+        </select>
+       
+        <button style="float:right" type="button" id="submitAnswers">Submit Answers</button>
+
+    </form>
+
+    <br>
+
+    <div id="outputText"></div>
+
+    <script>
+        /* Comment: Enter code below */
+        function checkAnswers() {
+            var counter = 0;
+            var answerRatio = 0;
+            var getResponse = document.getElementsByClassName("question");
+            //console.log(getResponse[0].value); To view the value of each individual element
+            var output = document.getElementById("outputText");
+            if (getResponse[0].value == answers[0]) {
+                counter = counter + 1;
+            }
+            if (getResponse[1].value == answers[1]) {
+                counter++;
+            }
+            if (getResponse[2].value == answers[2]) {
+                counter++;
+            }
+            if (getResponse[3].value == answers[3]) {
+                counter++;
+            }
+            if (getResponse[4].value == answers[4]) {
+                counter++;
+            }
+            answerRatio = (counter / getResponse.length) * 100;
+            console.log("Percent of questions right: " + answerRatio)
+            if (answerRatio > 60) {
+                output.innerHTML = "You got most or all of the answers correct!";
+            }else{
+                output.innerHTML = "You got most of the answers incorrect! Try Again!";
+            }
+        }
+        var answers = ["true", "coral", "pandora", "fishing", "shark"];
+        var getButton = document.getElementById("submitAnswers");
+        getButton.addEventListener("click", checkAnswers);
+    </script>
+
+</body>
+
+</html>

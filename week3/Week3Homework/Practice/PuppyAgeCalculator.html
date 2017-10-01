@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Puppy Age Calculator</title>
+
+    <style>
+        /* Enter CSS below */
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>Puppy Age Calculator</h1>
+
+    <p><i>How old is your dog in dog years?</i></p>
+    
+    <br><br>
+    
+    <form>
+        <label for="age">Age of Puppy:</label>
+        <input type="number" name="age" id="age" min="0" max="100">
+        <br><br>
+        <button type="button" id="PuppyButton">Answer</button>
+        <br><br>
+    </form>
+    
+    <div id="output"></div>
+
+    <script>
+
+        function calcPuppyAge(){
+            var PuppyAge = document.getElementById("age").value;
+            console.log(PuppyAge + "age");
+            
+            var PuppyAgeCalc = PuppyAge * 7;
+            console.log(PuppyAgeCalc);
+            
+            var message = "Your dog is " + PuppyAgeCalc + " in dog years!";
+            console.log(message);
+            
+            var outputText = document.getElementById("output");
+            outputText.innerHTML = message;
+            
+        }
+        
+        var getButton = document.getElementById("PuppyButton");
+        getButton.addEventListener("click", calcPuppyAge);
+
+    </script>
+
+</body>
+
+</html>
