@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Puppy Digs</title>
+
+ </head>
+
+<style>
+    body {
+        background-color: lavender;
+    }
+    
+    h1 {
+        
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px, 0 0 5px;
+        text-align: center;
+    }
+    
+    input:focus {
+        background-color: blueviolet;
+    }
+    
+    p {
+        color: blueviolet;
+        text-align: center;
+    }
+
+    form {
+        text-align: center;
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+        
+    input[type=text] {
+        color: blueviolet;
+        text-align: center;
+        background-color: snow;
+        width:7%;
+        padding: 5px 10px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        font-size: 16px;
+        cursor: text;
+    }
+    
+    input {
+        color: blueviolet;
+        height: 40px;
+        width: 345px;
+        border-style:inset;
+        border-width: 5px;
+    }
+    
+    label {
+        color: blueviolet;
+        font-size: 18px;
+    }
+    
+    button {
+        background-color: snow;
+        border-style: inset;
+        color: blueviolet;
+        padding: 2px 6px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 3px 1px;
+        font-style: oblique;
+    }
+    
+    button:hover {
+        background-color: blueviolet;
+        color: snow;
+    }
+    
+    button:active {
+        background-color: blueviolet;
+        box-shadow: 0 5px #666;
+        transform: translate(4px);
+    }
+    
+    div {
+        color: white;
+        font-size: 45px;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 15px darkblue;
+        text-align: center;
+    }
+    
+    h5 {
+        text-align: center;
+    }
+    
+    #img1 {
+        width: 330px;
+        height: 170px;
+        float: left;
+        margin: 0px 15 px 15 px 0 px;
+        
+    }
+    
+    #img2 {
+        width: 330px;
+        height: 170px;
+        float: right;
+        margin: 0px 0px 15px 15px;
+    }
+    
+    ul {
+        list-style-type: none;
+        color: blueviolet;
+        background-color: snow;
+        width: 180px;
+        height: 505px;
+        border: 20px solid blueviolet;
+        padding: 15px;
+        margin: 1px;
+    }
+    
+    p3 {
+        float: left; 
+        margin: 0px 0px 45px 45px;
+    }
+    
+    p2 {
+        color: blueviolet;
+        float: left;
+        font-size: 25px;
+    }
+
+    </style>
+
+<body>
+
+    <h1>&nbsp;How far has the dog gone?</h1>
+    
+    <br>
+
+    <p><i><b>Description : </b>This program calculates how much of a 3 foot hole that a dog has dug. The user must enter the current number of digs that their dog has made into a text box. Then they must press a button to find out the answer. The button will produce the percentage of the hole that the dog has already dug in a message below it.
+    </i></p>
+    
+    <br>
+    
+    <img id="img1" src="http://www.dogtrainingbasics.com/wp-content/uploads/2014/08/stop-dog-digging.jpg">
+   
+   <img id="img2" src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/How-can-I-get-my-dogs-to-stop-digging.jpg?itok=0uiZBXzV">
+    
+    <p>On <b>average</b>, a dog usually digs a hole that is 3 feet deep.</p>
+    <p style="font-size:15px;"><b>&nbsp;&nbsp;&nbsp;The formula for this calculation is :&nbsp;</b> (&nbsp; CurrentDigsAmount &nbsp; / &nbsp; AverageDigs &nbsp;) &nbsp;&nbsp;X &nbsp;100 </p>
+    
+    <br>
+        <p style="font-size:15px"><i><b>Intsructions:</b> Type the amount of current <br> digs into the text box below. Hit enter to <br> find out the percentage of the hole that <br> your dog as already dug.</i></p>
+        
+    <h5>
+      
+       <form>
+           <label for="digs"><b>Enter # of digs :</b></label>&nbsp;
+           <input type="text" name="digs" id="digs">&nbsp;&nbsp;
+           <button type="button" id="DigsButton"><b>ENTER</b></button>
+        </form>
+        
+    </h5>       
+   
+   <div id="output"></div>
+   
+   <br><br><br>
+   
+   <p2>
+       <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code Plan</b>
+   </p2>
+   
+    <p2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input Needed</b></p2>
+    <p2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output Needed</b></p2>
+    <p2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Variables Needed</b></p2>
+    
+    <br><br>
+   
+   <p3>
+       <ul>
+           <li>First, I need the user to provide me with the amount of digs that their dog has already dug. I will create a form text input for the user to type the dig amount. Next to the text box, I will place a button. The user will need to click on the button in order to receive their answer. The click on the button will activate the calculation function that I have formulated. I will then need to grab the value of the form input to put into the function. I will take the value of the current digs amount and divide it by 150, the average digs amount, and multiply that number by 100 to generate a percentage. Lastly, I will return a message to the user presenting them with the answer to how far their dog has gone. </li>
+       </ul>
+   </p3>
+   
+    <p3>
+        <ul>
+            <li>I need an input for the amount of digs that were already dug by the dog.</li>
+            <br><br><br><br><br><br>
+               
+            <li>I produced an input text box for the user to provide the amount of digs.</li>
+                <img src="https://static.wixstatic.com/media/e33247_426f13088dc745e48dc4010f27022bb9~mv2.jpg/v1/fill/w_189,h_192,al_c,q_80/e33247_426f13088dc745e48dc4010f27022bb9~mv2.jpg">
+        </ul>
+    </p3>
+                          
+    <p3>
+        <ul>
+            <li>I need an output for the percentage of the hole that has already been dug.</li>
+            <br><br><br><br>
+            <li>I produced a message with the percentage of the hole that has already been dug. I also created an output text that will place the message on the page when the user clicks the button.</li>
+            <img src="https://static.wixstatic.com/media/e33247_db9da2a2732b44579f5cc731c500c005~mv2.jpg/v1/fill/w_178,h_171,al_c,q_80/e33247_db9da2a2732b44579f5cc731c500c005~mv2.jpg">
+            </ul>
+    </p3>
+          
+  
+    <p3>
+        <ul>
+            <li>I need a variable for the current amount of digs.</li>
+            <br>
+            <li>I need a variable that uses the formula to calculate the answer.</li>
+            <br>
+            <li>I need a variable for the message that appears with the answer after the button is clicked.</li>
+            <br>
+            <li>I need a variable for the output text.</li>
+            <br>
+            <li>I need a variable for the average amount of digs.</li>
+            <br>
+            <li>I need a variable that allows the button to function on a click and output the answer.</li></ul>
+    </p3>
+   
+   <br><br>
+   
+    <script>
+        
+        function DugHole(){
+            var currentDigs = document.getElementById("digs").value;
+            console.log("Current Digs: " + currentDigs);
+            
+            var digsCalculation = (currentDigs/averageDigs) * 100;
+   
+            digsCalculation = Math.round(digsCalculation);
+            
+            console.log(digsCalculation);
+            
+            var message = "Your dog has gone " + digsCalculation +"% of the way!";
+            console.log(message);
+ 
+            var outputText = document.getElementById("output");
+            outputText.innerHTML = message;
+            
+        }
+        
+        var averageDigs = 150;
+        
+        var getButton = document.getElementById("DigsButton");
+        getButton.addEventListener("click", DugHole);
+        
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lifetime Supply of Chocolate</title>
+
+</head>
+
+
+<body>
+   
+    
+    <h1>Lifetime Supply of Chocolate</h1>
+    
+    <h3><i>How much chocolate will you need to last you a lifetime?</i></h3>
+    
+    <br>
+    
+    <p>Enter your name in the text box below and hit the button for the amount of chocolate you will need to last you a lifetime.</p>
+    
+    <div id="output"></div>
+    
+    <form>
+        <label for="age">How old are you?</label>
+        <input type="text" name="age" id="age"> 
+        <button type="button" id="ageButton">CLICK FOR ANSWER</button>
+    </form>
+    
+    <script>
+        
+     function calculateSupply(){
+        var supplyAmount = document.getElementById("age").value;
+        console.log("Supply Amount" + supplyAmount);
+        
+        var maxAge = 105;
+        
+        var numPerDay = supplyAmount / 365
+         
+        var totalNeeded = (numPerDay * 365) * (maxAge - supplyAmount);
+        console.log(totalNeeded);
+         
+        var message = "You will need " + totalNeeded + " bars of chocolate to last you until the age of " + maxAge;
+        console.log(message);
+         
+            var outputText = document.getElementById("output");
+            outputText.innerHTML = message;
+        
+    }
+    
+    var getButton = document.getElementById("ageButton");
+    getButton.addEventListener("click", calculateSupply);
+        
+    </script>
+
+</body>
+
+</html>

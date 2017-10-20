@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+    <title>Circumference Calculator</title>
+
+    <style>
+        
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>Geometry Calculator</h1>
+
+    <h3>Find the Circumference of the Circle!</h3>
+    
+    <form>
+    <label for="radius">Enter the value of the radius:</label>
+    <input type="number" id="radius" min="0">
+    <button type="button" id="circButton">CLICK</button>
+    </form>
+
+   <div id="output"></div>
+   
+    <script>
+        
+        function calcCircumference() {
+            var radius = document.getElementById("radius").value;
+            console.log("radius" + radius);
+            
+            var circCalc = radius = 2 * 3.14 * radius;
+            console.log(circCalc);
+            
+            var message = "The circumference of the circle is " + circCalc;
+            console.log(message);
+            
+            var outputText = document.getElementById("output");
+            outputText.innerHTML = message;
+
+            }
+        
+            var getButton = document.getElementById("circButton");
+            getButton.addEventListener("click", calcCircumference);
+
+
+    </script>
+
+</body>
+
+</html>
