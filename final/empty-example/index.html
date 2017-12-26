@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+ 
+  <head>
+   
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <link rel="stylesheet" href="style.css">
+ 
+    
+    <style> 
+			
+		h1 {
+        
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px, 0 0 5px;
+        text-align: center;
+		position: absolute;
+		left: 450px;
+    	top: -15px;	
+		
+    	}
+		
+		.quiz {
+			text-align: left;
+			position: absolute;
+			left: 450px;
+    		top: 165px;	
+		}
+		
+		
+		.tryAgain {
+			color: white;
+			text-align: left;
+			position: absolute;
+			left: 600px;
+    		top: 600px;	
+		}
+		
+	
+		body {
+			background-color:black;
+		}
+		
+		p {
+			text-align: left;
+			position: absolute;
+			left: 600px;
+    		top: 550px;
+		}
+		
+		
+		.andromeda {
+			position: absolute;
+			left: 25px;
+    		top: 60px;
+			opacity: 1;
+			display: block;
+			transition: .5s ease;
+			backface-visibility: hidden;
+		}
+		
+		.middle1 {
+			transition: .5s ease;
+			opacity: 0;
+		}
+		
+		.con1:hover .andromeda {
+			opacity: 0.3;
+		}
+		
+		.con1:hover .middle1 {
+			opacity: 1;
+		}
+		
+		.text1 {
+			color: white;
+			font-size: 14px;
+			position: absolute;
+			left: 50px;
+		}
+		
+		.aquarius {
+			position: absolute;
+			left: 210px;
+    		top: 60px;
+			opacity: 1;
+  			display: block;
+  			transition: .5s ease;
+  			backface-visibility: hidden;
+		}
+		
+		.middle2 {
+			transition: .5s ease;
+  			opacity: 0;
+		}
+		
+		.con2:hover .aquarius {
+			opacity: 0.3;
+		}
+		
+		.con2:hover .middle2 {
+			opacity: 1;
+		}
+		
+		.text2 {
+  			color: white;
+			font-size: 14px;
+			position: absolute;
+			left: 250px;
+		}
+		
+		.ursaMajor {
+			position: absolute;
+			left: 395px;
+    		top: 60px;
+			opacity: 1;
+  			display: block;
+  			transition: .5s ease;
+  			backface-visibility: hidden;
+		}
+		
+		.middle3 {
+			transition: .5s ease;
+  			opacity: 0;
+		}
+		
+		.con3:hover .ursaMajor {
+			opacity: 0.3;
+		}
+		
+		.con3:hover .middle3 {
+			opacity: 1;
+		}
+		
+		.text3 {
+  			color: white;
+  			font-size: 14px;
+			position: absolute;
+			left: 425px;
+		}
+		
+		.capricorn {
+			position: absolute;
+			left: 580px;
+    		top: 60px;
+			opacity: 1;
+			display: block;
+			transition: .5s ease;
+			backface-visibility: hidden;
+		}
+		
+		.middle4 {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+		}
+		
+		.con4:hover .image {
+			opacity: 0.3;
+		}
+		
+		.con4:hover .middle4{
+			opacity: 1;
+		}
+		
+		.text4 {
+			color: white;
+			font-size: 14px;
+			position: absolute;
+			left: 605px;
+		}
+		
+		.gemini {
+			position: absolute;
+			left: 760px;
+    		top: 60px;
+			opacity: 1;
+			display: block;
+			transition: .5s ease;
+			backface-visibility: hidden;
+		}
+		
+		.middle5 {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+		}
+		
+		.con5:hover .gemini {
+			opacity: 0.3;
+		}
+		
+		.con5:hover .middle5 {
+			opacity: 1;
+		}
+		
+		.text5 {
+			color: white;
+			font-size: 14px;
+			position: absolute;
+			left: 790px;
+		}
+		
+		.orion {
+			position: absolute;
+			left: 940px;
+    		top: 60px;
+			opacity: 1;
+			display: block;
+			transition: .5s ease;
+			backface-visibility: hidden;
+		}
+		
+		.middle6 {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+		}
+		
+		.con6:hover .orion {
+			opacity: 0.3;
+		}
+		
+		.con6:hover .middle6 {
+			opacity: 1;
+		}
+		
+		.text6 {
+			color: white;
+			font-size: 14px;
+			position: absolute;
+			left: 975px;
+		}
+		
+		.perseus {
+			position: absolute;
+			left: 1120px;
+    		top: 60px;
+			opacity: 1;
+			display: block;
+			transition: .5s ease;
+			backface-visibility: hidden;
+		}
+		
+		.middle7 {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+		}
+		
+		.con7:hover .perseus {
+			opacity: 0.3;
+		}
+		
+		.con7:hover .middle7 {
+			opacity: 1;
+		}
+		
+		.text7 {
+			color: white;
+			font-size: 14px;
+			position: absolute;
+			left: 1150px;
+		}
+		
+		.form1 {
+			position: absolute;
+			left: 870px;
+			top: 320px;
+		}
+
+		
+	</style>
+    
+    <script src="../p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    
+  
+    
+  </head>
+ 
+  
+  <body>
+ 
+  <div id="constellation"></div> 
+  
+  <div id="universe"></div>
+    
+  <h1 style="color: white">Constellations of the Universe</h1>
+  
+  <br><br><br><br>
+
+	<div class="con1">
+		<img src="assets/andromeda.jpg" id="andromeda" class="andromeda" style="width:10%">
+		<div class="middle1">
+			<h5 class="text1">Andromeda</h5>
+		</div>
+	</div>
+	
+	<div class="con2">
+		<img src="assets/aquarius.jpg" id="aquarius" class="aquarius" style="width:10%">
+		<div class="middle2">
+			<h5 class="text2">Aquarius</h5>
+		</div>
+	</div>
+	
+	<div class="con3">
+		<img src="assets/ursaMajor.jpg" id="ursaMajor" class="ursaMajor" style="width:10%">
+		<div class="middle3">
+			<h5 class="text3">Ursa Major</h5>
+		</div>
+	 </div>
+	
+	<div class="con4">
+		<img src="assets/capricorn.jpg" id="capricorn" class="capricorn" style="width:10%">
+		<div class="middle4">
+			<h5 class="text4">Capricorn</h5>
+		</div>
+	</div>
+	
+	<div class="con5">
+		<img src="assets/gemini.jpg" id="gemini" class="gemini" style="width:10%">
+		<div class="middle5">
+			<h5 class="text5">Gemini</h5>
+		</div>
+	</div>
+	
+	<div class="con6">
+		<img src="assets/orion.jpg" id="orion" class="orion" style="width:10%">
+		<div class="middle6">
+			<h5 class="text6">Orion</h5>
+		</div>
+	</div>
+	
+	<div class="con7">
+		<img src="assets/perseus.jpg" id="perseus" class="perseus" style="width:10%">
+		<div class="middle7">
+			<h5 class="text7">Perseus</h5>
+		</div>
+	  </div>
+	
+  
+  <div id="quiz" class="quiz">
+  <h2 style="color: white" align="center">How Much Do You Know?</h2>
+	
+
+    <form id="quizForm" style="color: white">
+
+
+        <label for="question1">How many constellations are there?</label> <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="question1" id="question1" class="question">
+            <option value="1">1</option>
+            <option value="88">88</option>
+            <option value="1,000,003">1,000,003</option>
+            <option value="539">539</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label for="question2">Star maps are made of the brightest stars and the patterns that <br> they make which give rise to the names of the constellations.
+        </label> <br> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="question2" id="question2" class="question">
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label for="question3">All of the constellations are visible from any one point on Earth.
+        </label><br> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="question3" id="question3" class="question">
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select>
+
+        <br>
+        <br>
+        
+        <label for="question4">What constellation was named after a flying horse?
+        </label><br> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="question4" id="question4" class="question">
+            <option value="Orion">Orion</option>
+            <option value="Ursa Minor">Ursa Minor</option>
+            <option value="Draco">Draco</option>
+            <option value="Pegasus">Pegasus</option>
+        </select>
+
+        <br>
+        <br>
+        
+        <label for="question5">What is the largest constellation by area in the sky?
+        </label><br> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="question5" id="question5" class="question">
+            <option value="Hydra">Hydra</option>
+            <option value="Gemini">Gemini</option>
+            <option value="Orion">Orion</option>
+            <option value="Leo">Leo</option>
+        </select>
+
+        <br>
+        <br>
+        
+        <label for="question6">What group of constellations are used in astrology?
+        </label><br> 
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="question6" id="question6" class="question">
+            <option value="Ancient Constellations">Ancient Constellations</option>
+            <option value="Northern Constellations">Northern Constellations</option>
+            <option value="Ursa Constellations">Ursa Constellations</option>
+            <option value="Zodiac Constellations">Zodiac Constellations</option>
+        </select>
+
+        <br>
+        <br>
+
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="submitAnswers">Submit Answers</button>
+	
+    </form>
+    </div>
+
+    <br>
+
+    <div id="outputText"></div>
+    
+    
+    
+    
+    <form name="form1" class="form1">
+    
+
+<table border="15" cellspacing="1" cellpadding="8">
+  <tr>
+    <td>
+        <font size="3" face="arial" style="color: white"><b>Month</b></font>
+    </td>
+    <td>
+       
+       
+       
+       
+        <font size="3" face="arial" style="color: white"><b>Date</b></font>
+    </td>
+    
+    <td>
+        <font size="3" face="arial" style="color: white"><b>Zodiac Sign</b></font>
+    </td>
+  </tr>
+  <tr>
+    <td>
+                    <select name="month">
+                    <option value="x" selected> Select </option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                    </select>
+    </td>
+    <td>
+                    <select name="date" onChange="validate()">
+                    <option value="y" selected> Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    </select>
+    </td>
+    <td>
+       <input name="sign" size="12" value="..." /><input type="button" value="submit" onClick="sunsign()">
+    </td>
+  </tr>
+</table>
+</form>
+
+
+
+    <script>
+        /* Comment: Enter code below */
+		
+		
+        function checkAnswers() {
+            var counter = 0;
+            var answerRatio = 0;
+            var getResponse = document.getElementsByClassName("question");
+            //console.log(getResponse[0].value); To view the value of each individual element
+            var output = document.getElementById("outputText");
+            if (getResponse[0].value == answers[0]) {
+                counter = counter + 1;
+            }
+            if (getResponse[1].value == answers[1]) {
+                counter++;
+            }
+            if (getResponse[2].value == answers[2]) {
+                counter++;
+            }
+			 if (getResponse[3].value == answers[3]) {
+                counter++;
+            }
+			 if (getResponse[4].value == answers[4]) {
+                counter++;
+            }
+			 if (getResponse[5].value == answers[5]) {
+                counter++;
+            }
+            answerRatio = (counter / getResponse.length) * 100;
+            console.log("Percent of questions right: " + answerRatio)
+            if (answerRatio > 60) {
+                output.innerHTML = "<p style='color: white;'More than 60%!</p>";
+            }else{
+                output.innerHTML = "<p style='color: white;'>Less than 60%</p>";
+            }
+       }
+        var answers = ["88", "true", "false", "Hydra", "Zodiac Constellations"];
+        var getButton = document.getElementById("submitAnswers");
+        getButton.addEventListener("click", checkAnswers);
+		
+		
+		
+		//ZODIAC
+function sunsign() {
+   document.form1.date.selectedIndex;
+   document.form1.month.selectedIndex;
+   document.form1.sign.value;
+   if (document.form1.month.selectedIndex == 1 && document.form1.date.selectedIndex <=19) {document.form1.sign.value = "Capricorn";}
+   if (document.form1.month.selectedIndex == 1 && document.form1.date.selectedIndex >=20) {document.form1.sign.value = "Aquarius";}
+   if (document.form1.month.selectedIndex == 2 && document.form1.date.selectedIndex <=18) {document.form1.sign.value = "Aquarius";}
+   if (document.form1.month.selectedIndex == 2 && document.form1.date.selectedIndex >=19) {document.form1.sign.value = "Pisces";}
+   if (document.form1.month.selectedIndex == 3 && document.form1.date.selectedIndex <=20) {document.form1.sign.value = "Pisces";}
+   if (document.form1.month.selectedIndex == 3 && document.form1.date.selectedIndex >=21) {document.form1.sign.value = "Aries";}
+   if (document.form1.month.selectedIndex == 4 && document.form1.date.selectedIndex <=20) {document.form1.sign.value = "Aries";}
+   if (document.form1.month.selectedIndex == 4 && document.form1.date.selectedIndex >=21) {document.form1.sign.value = "Taurus";}
+   if (document.form1.month.selectedIndex == 5 && document.form1.date.selectedIndex <=20) {document.form1.sign.value = "Taurus";}
+   if (document.form1.month.selectedIndex == 5 && document.form1.date.selectedIndex >=21) {document.form1.sign.value = "Gemini";}
+   if (document.form1.month.selectedIndex == 6 && document.form1.date.selectedIndex <=20) {document.form1.sign.value = "Gemini";}
+   if (document.form1.month.selectedIndex == 6 && document.form1.date.selectedIndex >=21) {document.form1.sign.value = "Cancer";}
+   if (document.form1.month.selectedIndex == 7 && document.form1.date.selectedIndex <=21) {document.form1.sign.value = "Cancer";}
+   if (document.form1.month.selectedIndex == 7 && document.form1.date.selectedIndex >=22) {document.form1.sign.value = "Leo";}
+   if (document.form1.month.selectedIndex == 8 && document.form1.date.selectedIndex <=21) {document.form1.sign.value = "Leo";}
+   if (document.form1.month.selectedIndex == 8 && document.form1.date.selectedIndex >=22) {document.form1.sign.value = "Virgo";}
+   if (document.form1.month.selectedIndex == 9 && document.form1.date.selectedIndex <=21) {document.form1.sign.value = "Virgo";}
+   if (document.form1.month.selectedIndex == 9 && document.form1.date.selectedIndex >=22) {document.form1.sign.value = "Libra";}
+   if (document.form1.month.selectedIndex == 10 && document.form1.date.selectedIndex <=21) {document.form1.sign.value = "Libra";}
+   if (document.form1.month.selectedIndex == 10 && document.form1.date.selectedIndex >=22) {document.form1.sign.value = "Scorpio";}
+   if (document.form1.month.selectedIndex == 11 && document.form1.date.selectedIndex <=21) {document.form1.sign.value = "Scorpio";}
+   if (document.form1.month.selectedIndex == 11 && document.form1.date.selectedIndex >=22) {document.form1.sign.value = "Sagittarius";}
+   if (document.form1.month.selectedIndex == 12 && document.form1.date.selectedIndex <=20) {document.form1.sign.value = "Sagittarius";}
+   if (document.form1.month.selectedIndex == 12 && document.form1.date.selectedIndex >=21) {document.form1.sign.value = "Capricorn";}
+
+   if (document.form1.month.selectedIndex == "x" || document.form1.date.selectedIndex == "y") return;
+ }
+
+function validate() {
+   if (document.form1.month.selectedIndex == 2 && document.form1.date.selectedIndex > 29) {alert("There are only a maximum of 29 days in February."); return false;}
+   if (document.form1.month.selectedIndex == 4 && document.form1.date.selectedIndex == 31) {alert("There are only 30 days in April."); return false;}
+   if (document.form1.month.selectedIndex == 6 && document.form1.date.selectedIndex == 31) {alert("There are only 30 days in June."); return false;}
+   if (document.form1.month.selectedIndex == 9 && document.form1.date.selectedIndex == 31) {alert("There are only 30 days in September."); return false;}
+   if (document.form1.month.selectedIndex == 11 && document.form1.date.selectedIndex == 31) {alert("There are only 30 days in November."); return false;}
+else{
+return true;
+}
+ }
+
+
+    </script>
+    
+    
+  
+  </body>
+  
+</html>
